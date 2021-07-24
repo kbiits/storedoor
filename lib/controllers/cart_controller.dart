@@ -150,7 +150,13 @@ class CartController extends GetxController {
   }
 
   void removeFromCart(int productId) async {
-    carts.firstWhere((element) => element.product.id == productId).count -= 1;
+    var cart = carts.firstWhere((element) => element.product.id == productId);
+    if (cart.count > 1) {
+      cart.count -= 1;
+    } else {
+      removeProductFromCart(productId);
+      return;
+    }
     carts.refresh();
     var jsonString = await CartServices.removeFromCart(productId);
     if (jsonString == null) {

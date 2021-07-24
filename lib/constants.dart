@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:storedoor/size_config.dart';
 
-final _apiUrl = "https://evening-plains-61530.herokuapp.com/api/";
+final _apiUrl = "http://192.168.42.88:8000/api/";
 get apiUrl => _apiUrl;
 
 Color mBackgroundColor = Color(0xFFFFFFFF);

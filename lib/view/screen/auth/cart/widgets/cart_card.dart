@@ -126,6 +126,7 @@ class CartCard extends StatelessWidget {
                           ),
                           onPressed: () {
                             cartController.addToCart(item.product.id);
+                            if (Get.isSnackbarOpen) Get.back();
                           },
                         )
                       ],

@@ -28,7 +28,7 @@ class AuthServices {
       var jsonString = response.body;
       return json.decode(jsonString);
     }
-    return null;
+    return null; 
   }
 
   static Future<String> _getId() async {

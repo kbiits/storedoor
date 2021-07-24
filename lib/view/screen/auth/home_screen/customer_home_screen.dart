@@ -21,35 +21,8 @@ class CustomerHomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // await productController.fetchProducts();
-    // productController.fetchProducts();
-    // final fetchProducts = productController.fetchProducts();
-    // final fetchCart = cartController.fetchData();
     return Scaffold(
       body:
-          // FutureBuilder(
-          // future: Future.wait([fetchCart, fetchProducts]),
-          // builder: (context, snapshot) {
-          // return
-          // snapshot.connectionState == ConnectionState.waiting
-          // ?
-          // Container(
-          // child: Center(
-          // child: CircularProgressIndicator(),
-          // ),
-          // )
-          // : snapshot.hasError
-          // ? Get.dialog(
-          // Container(
-          // child: Center(
-          // child: Text(
-          // "Terjadi kesalahan, silahkan restart aplikasi"),
-          // ),
-          // ),
-          // barrierDismissible: true,
-          // transitionDuration: Duration(milliseconds: 500),
-          // )
-          // :
           Obx(
         () => SafeArea(
           child: bottomNavbarController.selectedMenu == ScreenBottomBar.home
